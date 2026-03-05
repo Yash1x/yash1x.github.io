@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InvestAnalytica — личный кабинет (демо)</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html#hero" class="logo">
+      <img src="assets/img/logo.svg" alt="Логотип InvestAnalytica" class="logo-mark" />
+      <span class="logo-text">InvestAnalytica</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label class="nav-toggle-label" for="nav-toggle">
+      <span class="nav-toggle-line"></span>
+    </label>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <ul class="nav-list">
+        <li><a href="index.html#about">О проекте</a></li>
+        <li><a href="methodology.html">Методика</a></li>
+        <li><a href="demo.html">Демо-интерфейс</a></li>
+        <li><a href="login.html">Вход</a></li>
+        <li><a href="register.html" class="nav-accent">Регистрация</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section hero-section">
+    <div class="container section-inner">
+      <header class="section-header">
+        <h2>Личный кабинет (демо)</h2>
+        <p>
+          Пример того, как может выглядеть интерфейс пользователя системы:
+          список инвестиционных проектов и краткие показатели эффективности.
+        </p>
+      </header>
+
+      <div class="profile-layout">
+        <aside class="profile-sidebar">
+          <div class="profile-card">
+            <p class="profile-label">Текущий пользователь</p>
+            <p class="profile-name">Demo User</p>
+            <p class="profile-role">Студент / аналитик (учебный режим)</p>
+            <p class="profile-meta">E-mail: user@example.com</p>
+          </div>
+          <nav class="profile-nav">
+            <a href="#projects" class="profile-nav-link profile-nav-link-active">Мои проекты</a>
+            <a href="#reports" class="profile-nav-link">Отчёты</a>
+            <a href="#settings" class="profile-nav-link">Настройки</a>
+          </nav>
+          <a href="index.html" class="btn btn-ghost profile-logout">Выйти на главную</a>
+        </aside>
+
+        <div class="profile-content">
+          <section id="projects" class="profile-section">
+            <h3>Мои инвестиционные проекты</h3>
+            <p class="caption">
+              Карточки ниже демонстрируют возможную структуру представления проектов:
+              горизонты планирования, ставки дисконтирования и ключевые показатели.
+            </p>
+            <div class="profile-projects-grid">
+              <article class="profile-project-card">
+                <p class="profile-project-title">Проект 1. Модернизация оборудования</p>
+                <p class="profile-project-meta">
+                  Горизонт: 7 лет · Ставка дисконтирования: 15%
+                </p>
+                <p class="profile-project-metrics">
+                  NPV: <span class="metric-positive">+ 1 250 000 ₽</span> · IRR: 18,4% · PI: 1,32
+                </p>
+              </article>
+
+              <article class="profile-project-card">
+                <p class="profile-project-title">Проект 2. Запуск новой линии</p>
+                <p class="profile-project-meta">
+                  Горизонт: 5 лет · Ставка дисконтирования: 14%
+                </p>
+                <p class="profile-project-metrics">
+                  NPV: <span class="metric-positive">+ 640 000 ₽</span> · IRR: 17,1% · PI: 1,18
+                </p>
+              </article>
+
+              <article class="profile-project-card profile-project-card-negative">
+                <p class="profile-project-title">Проект 3. Расширение склада</p>
+                <p class="profile-project-meta">
+                  Горизонт: 6 лет · Ставка дисконтирования: 16%
+                </p>
+                <p class="profile-project-metrics">
+                  NPV: <span class="metric-negative">− 310 000 ₽</span> · IRR: 13,0% · PI: 0,87
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section id="reports" class="profile-section">
+            <h3>Отчёты</h3>
+            <p class="caption">
+              В полноценной системе здесь могли бы формироваться:
+              сводные отчёты по всем проектам, отчёты для презентаций и детальные выгрузки.
+            </p>
+          </section>
+
+          <section id="settings" class="profile-section">
+            <h3>Настройки профиля</h3>
+            <p class="caption">
+              Пример описательного блока, где пользователь мог бы управлять
+              персональными данными и параметрами отображения проектов.
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-copy">
+      © 2025. Проектирование и разработка программного средства автоматизации процедур анализа
+      и оценки эффективности инвестиционных проектов. Лабораторные работы №5–7.
+    </p>
+    <p class="footer-meta">
+      Учебный демонстрационный сайт. Интерфейс без серверной логики авторизации.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

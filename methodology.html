@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InvestAnalytica — методика</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html#hero" class="logo">
+      <img src="assets/img/logo.svg" alt="Логотип" class="logo-mark" />
+      <span class="logo-text">InvestAnalytica</span>
+    </a>
+    
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label class="nav-toggle-label" for="nav-toggle">
+      <span class="nav-toggle-line"></span>
+    </label>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <ul class="nav-list">
+        <li><a href="index.html#about">О проекте</a></li>
+        <li><a href="methodology.html">Методика</a></li>
+        <li><a href="demo.html">Демо-интерфейс</a></li>
+        <li><a href="login.html">Вход</a></li>
+        <li><a href="register.html" class="nav-accent">Регистрация</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section hero-section">
+    <div class="container section-inner">
+      <header class="section-header">
+        <h2>Методическая основа оценки инвестиционных проектов</h2>
+        <p>
+          На этой странице приведено текстовое описание используемых показателей эффективности
+          и логики их расчёта в разработанном программном средстве.
+        </p>
+      </header>
+
+      <article class="text-block">
+        <h3>Чистый дисконтированный доход (NPV)</h3>
+        <p>
+          NPV (Net Present Value) — сумма дисконтированных денежных потоков по проекту за весь горизонт
+          планирования за вычетом первоначальных инвестиций. Положительное значение NPV свидетельствует
+          об эффективности проекта.
+        </p>
+        <p class="caption">
+          В системе NPV рассчитывается автоматически на основе заданной ставки дисконтирования и графика
+          денежных потоков по годам.
+        </p>
+      </article>
+
+      <article class="text-block">
+        <h3>Внутренняя норма доходности (IRR)</h3>
+        <p>
+          IRR (Internal Rate of Return) — ставка дисконтирования, при которой NPV проекта обращается в ноль.
+          Если IRR проекта превышает требуемую инвестором норму доходности, проект может быть принят.
+        </p>
+        <p class="caption">
+          В программном средстве IRR вычисляется численными методами, на основании того же массива денежных
+          потоков, что и NPV.
+        </p>
+      </article>
+
+      <article class="text-block">
+        <h3>Срок окупаемости и индекс прибыльности</h3>
+        <p>
+          Срок окупаемости показывает, за сколько лет суммарные притоки денежных средств компенсируют
+          первоначальные вложения. Индекс прибыльности (PI) отражает отношение дисконтированных притоков
+          к объёму инвестиций.
+        </p>
+        <p class="caption">
+          Оба показателя вычисляются автоматически и выводятся в интерфейсе рядом с NPV и IRR.
+        </p>
+      </article>
+
+      <article class="text-block">
+        <h3>Анализ чувствительности</h3>
+        <p>
+          Анализ чувствительности позволяет оценить, как изменятся значения показателей эффективности при
+          варьировании ключевых параметров: ставки дисконтирования, объёма выручки, операционных затрат и т.п.
+        </p>
+        <p class="caption">
+          В перспективе модуль анализа чувствительности может быть реализован в виде набора сценариев
+          с возможностью переключения прямо в интерфейсе.
+        </p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-copy">
+      © 2025. Методическая страница проекта InvestAnalytica.
+    </p>
+  </div>
+</footer>
+
+
+</body>
+</html>

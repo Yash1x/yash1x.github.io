@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InvestAnalytica — демо-интерфейс</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html#hero" class="logo">
+      <img src="assets/img/logo.svg" alt="Логотип" class="logo-mark" />
+      <span class="logo-text">InvestAnalytica</span>
+    </a>
+    
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label class="nav-toggle-label" for="nav-toggle">
+      <span class="nav-toggle-line"></span>
+    </label>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <ul class="nav-list">
+        <li><a href="index.html#about">О проекте</a></li>
+        <li><a href="methodology.html">Методика</a></li>
+        <li><a href="demo.html">Демо-интерфейс</a></li>
+        <li><a href="login.html">Вход</a></li>
+        <li><a href="register.html" class="nav-accent">Регистрация</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section hero-section">
+    <div class="container section-inner">
+      <header class="section-header">
+        <h2>Демо-интерфейс программного средства</h2>
+        <p>
+          Здесь описана логика работы основных экранов системы: ввода данных,
+          расчёта показателей и просмотра отчёта.
+        </p>
+      </header>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Экран ввода исходных данных</h3>
+          <p>
+            Пользователь задаёт параметры проекта: объём инвестиций, горизонт планирования,
+            ставку дисконтирования, прогнозные денежные потоки по годам, налоговую ставку
+            и ликвидационную стоимость.
+          </p>
+          <p class="caption">
+            В интерфейсе это реализовано в виде формы с несколькими блоками и подсказками.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Экран результатов и отчёта</h3>
+          <p>
+            После нажатия кнопки «Рассчитать» система отображает значения NPV, IRR, срока
+            окупаемости и индекса прибыльности, а также графики денежных потоков.
+          </p>
+          <p class="caption">
+            Пользователь может сохранить отчёт в формате PDF либо вывести краткую сводку
+            для презентации проекта.
+          </p>
+        </article>
+      </div>
+
+      <div class="cta-panel" style="margin-top:24px;">
+        <h3>Интерактивный блок (упрощённая демо-форма)</h3>
+        <form class="cta-form" onsubmit="event.preventDefault();">
+          <div class="form-row two-cols">
+            <div>
+              <label for="demo-capex">Капвложения, ₽</label>
+              <input type="number" id="demo-capex" placeholder="3 000 000" />
+            </div>
+            <div>
+              <label for="demo-horizon">Горизонт, лет</label>
+              <input type="number" id="demo-horizon" placeholder="5" />
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="demo-rate">Ставка дисконтирования, %</label>
+            <input type="number" id="demo-rate" placeholder="12" />
+          </div>
+          <div class="form-row">
+            <label for="demo-cashflow">Среднегодовой поток, ₽</label>
+            <input type="number" id="demo-cashflow" placeholder="900 000" />
+          </div>
+          <button type="submit" class="btn btn-secondary btn-full">Показать пример результата</button>
+          <p class="cta-note">
+            В рамках лабораторных работ расчёт здесь не реализован, блок используется для демонстрации
+            интерфейса и вёрстки.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-copy">
+      © 2025. Демо-страница интерфейса InvestAnalytica.
+    </p>
+  </div>
+</footer>
+
+
+</body>
+</html>

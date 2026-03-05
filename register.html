@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InvestAnalytica — регистрация</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html#hero" class="logo">
+      <img src="assets/img/logo.svg" alt="Логотип InvestAnalytica" class="logo-mark" />
+      <span class="logo-text">InvestAnalytica</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label class="nav-toggle-label" for="nav-toggle">
+      <span class="nav-toggle-line"></span>
+    </label>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <ul class="nav-list">
+        <li><a href="index.html#about">О проекте</a></li>
+        <li><a href="methodology.html">Методика</a></li>
+        <li><a href="demo.html">Демо-интерфейс</a></li>
+        <li><a href="login.html">Вход</a></li>
+        <li><a href="register.html" class="nav-accent">Регистрация</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section hero-section">
+    <div class="container section-inner auth-layout">
+      <div class="auth-text">
+        <header class="section-header">
+          <h2>Регистрация нового пользователя</h2>
+          <p>
+            Страница показывает, какие поля могли бы быть в форме регистрации
+            пользователя системы оценки инвестиционных проектов.
+          </p>
+        </header>
+        <p class="caption">
+          В учебной версии сайта регистрация не создаёт реального аккаунта —
+          форма служит только для демонстрации структуры интерфейса.
+        </p>
+      </div>
+      <div class="cta-panel auth-panel">
+        <h3>Регистрация</h3>
+        <form class="cta-form" action="profile.html" method="get">
+          <div class="form-row">
+            <label for="reg-name">ФИО</label>
+            <input id="reg-name" type="text" name="name" placeholder="Иванов Иван Иванович" required />
+          </div>
+          <div class="form-row">
+            <label for="reg-email">Электронная почта</label>
+            <input id="reg-email" type="email" name="email" placeholder="user@example.com" required />
+          </div>
+          <div class="form-row two-cols">
+            <div>
+              <label for="reg-role">Роль</label>
+              <select id="reg-role" name="role">
+                <option>Студент</option>
+                <option>Преподаватель</option>
+                <option>Аналитик / экономист</option>
+                <option>Руководитель</option>
+              </select>
+            </div>
+            <div>
+              <label for="reg-org">Организация</label>
+              <input id="reg-org" type="text" name="org" placeholder="Название организации" />
+            </div>
+          </div>
+          <div class="form-row two-cols">
+            <div>
+              <label for="reg-pass">Пароль</label>
+              <input id="reg-pass" type="password" name="password" placeholder="••••••••" required />
+            </div>
+            <div>
+              <label for="reg-pass2">Повтор пароля</label>
+              <input id="reg-pass2" type="password" name="password2" placeholder="••••••••" required />
+            </div>
+          </div>
+          <div class="form-row auth-row-inline">
+            <label class="checkbox-label">
+              <input type="checkbox" name="agree" required />
+              <span>Согласен с обработкой персональных данных</span>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Создать аккаунт</button>
+          <p class="cta-note">
+            После отправки формы открывается демо-страница «Личный кабинет».
+          </p>
+        </form>
+        <p class="auth-alt">
+          Уже есть аккаунт?
+          <a href="login.html">Войти</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-copy">
+      © 2025. Проектирование и разработка программного средства автоматизации процедур анализа
+      и оценки эффективности инвестиционных проектов. Лабораторные работы №5–7.
+    </p>
+    <p class="footer-meta">
+      Учебный демонстрационный сайт. Интерфейс без серверной логики авторизации.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

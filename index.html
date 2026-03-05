@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InvestAnalytica — главная</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html#hero" class="logo">
+      <img src="assets/img/logo.svg" alt="Логотип" class="logo-mark" />
+      <span class="logo-text">InvestAnalytica</span>
+    </a>
+    
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label class="nav-toggle-label" for="nav-toggle">
+      <span class="nav-toggle-line"></span>
+    </label>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <ul class="nav-list">
+        <li><a href="index.html#about">О проекте</a></li>
+        <li><a href="methodology.html">Методика</a></li>
+        <li><a href="demo.html">Демо-интерфейс</a></li>
+        <li><a href="login.html">Вход</a></li>
+        <li><a href="register.html" class="nav-accent">Регистрация</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="hero" class="section hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <p class="eyebrow">Учебный / исследовательский проект</p>
+        <h1>Проектирование и разработка программного средства для оценки эффективности инвестиционных проектов</h1>
+        <p class="hero-subtitle">
+          Инструмент, который автоматизирует расчёт NPV, IRR, срока окупаемости
+          и позволяет быстро сравнивать инвестиционные проекты без ручных ошибок
+          и долгих вычислений в Excel.
+        </p>
+        <div class="hero-actions">
+          <a href="demo.html" class="btn btn-primary">Посмотреть, как работает</a>
+          <button class="btn btn-secondary" data-open-modal="#method-modal">Подробнее о методике</button>
+        </div>
+        <ul class="hero-benefits">
+          <li>
+            <img src="assets/img/benefit-calc.svg" alt="" />
+            <span>Автоматический расчёт ключевых показателей</span>
+          </li>
+          <li>
+            <img src="assets/img/benefit-chart.svg" alt="" />
+            <span>Наглядные графики денежных потоков</span>
+          </li>
+          <li>
+            <img src="assets/img/benefit-report.svg" alt="" />
+            <span>Готовые отчёты для защиты проекта</span>
+          </li>
+        </ul>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <span>Демо-дэшборд проекта</span>
+          </div>
+          <div class="hero-card-body">
+            <div class="metric-row">
+              <div class="metric">
+                <span class="metric-label">NPV</span>
+                <span class="metric-value metric-positive">+ 1 250 000 ₽</span>
+                <span class="metric-pill metric-pill-positive">Проект эффективен</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">IRR</span>
+                <span class="metric-value">18,4%</span>
+                <span class="metric-caption">&gt; требуемой доходности 15%</span>
+              </div>
+            </div>
+            <div class="metric-row">
+              <div class="metric">
+                <span class="metric-label">Срок окупаемости</span>
+                <span class="metric-value">3,5 года</span>
+                <span class="metric-caption">Горизонт проекта — 7 лет</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Индекс прибыльности</span>
+                <span class="metric-value">1,32</span>
+                <span class="metric-caption">&gt; 1 — проект принимается</span>
+              </div>
+            </div>
+            <div class="chart-placeholder">
+              <img src="assets/img/hero-dashboard.svg" alt="График денежных потоков" />
+            </div>
+          </div>
+          <div class="hero-card-footer">
+            <span class="status-pill status-pill-positive">NPV &gt; 0</span>
+            <span class="status-pill status-pill-neutral">Риск: средний</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section section-alt">
+    <div class="container section-inner">
+      <header class="section-header">
+        <h2>О проекте</h2>
+        <p>
+          Проект посвящён разработке программного средства, которое автоматизирует процедуры анализа
+          и оценки эффективности инвестиционных проектов на основе классических методов инвестиционного анализа.
+        </p>
+      </header>
+
+      <div class="about-grid">
+        <article class="text-block">
+          <h3>Контекст и проблема</h3>
+          <p>
+            В учебной и практической деятельности оценка инвестиционных проектов часто выполняется вручную
+            в электронных таблицах. Это занимает много времени, требует высокой концентрации и приводит
+            к ошибкам при пересчёте сценариев и параметров.
+          </p>
+          <p>
+            Кроме того, результаты расчётов редко представлены в удобном для восприятия и защиты формате:
+            графики денежных потоков и сопоставление сценариев собираются вручную.
+          </p>
+        </article>
+        <article class="text-block">
+          <h3>Цель проекта</h3>
+          <p>
+            Целью проекта является проектирование и разработка программного средства, которое:
+          </p>
+          <ul class="bullet-list">
+            <li>стандартизирует процедуру ввода исходных данных по проекту;</li>
+            <li>автоматически рассчитывает показатели эффективности (NPV, IRR, PP, PI);</li>
+            <li>визуализирует результаты в форме графиков и таблиц;</li>
+            <li>формирует итоговый отчёт, пригодный для принятия решений и защиты проекта.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Функциональные возможности</h3>
+          <ul class="bullet-list">
+            <li>Ввод исходных данных (капвложения, операционные потоки, налоги, ликвидационная стоимость).</li>
+            <li>Настройка параметров анализа (горизонт планирования, ставка дисконтирования, сценарии).</li>
+            <li>Автоматический расчёт NPV, IRR, срока окупаемости, индекса прибыльности и др. показателей.</li>
+            <li>Анализ чувствительности ключевых параметров и их влияния на результаты.</li>
+            <li>Формирование итогового отчёта с основными выводами об эффективности проекта.</li>
+          </ul>
+        </article>
+        <article class="feature-card feature-card-outline">
+          <h3>Структура решения</h3>
+          <p>
+            В основе программного средства лежит модульный подход: отдельные модули отвечают
+            за ввод данных, расчёты, визуализацию и формирование отчётов. Это упрощает развитие и сопровождение системы.
+          </p>
+          <p class="caption">
+            На диаграмме показано, как данные проходят путь от ввода параметров до формирования итоговых отчётов.
+          </p>
+          <img src="assets/img/about-architecture.svg" alt="Схема архитектуры решения" class="about-diagram" />
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section id="benefits" class="section">
+    <div class="container section-inner">
+      <header class="section-header">
+        <h2>Какие задачи решает программное средство</h2>
+        <p>
+          Система ориентирована на разные группы пользователей, которым важно быстро и корректно
+          оценивать эффективность инвестиционных проектов.
+        </p>
+      </header>
+      <div class="benefits-grid">
+        <article class="benefit-card">
+          <div class="benefit-icon">
+            <img src="assets/img/benefits-students.svg" alt="" />
+          </div>
+          <h3>Для студентов и преподавателей</h3>
+          <ul class="bullet-list">
+            <li>Ускорение подготовки курсовых, дипломных и расчётных работ по инвестиционному анализу.</li>
+            <li>Меньше рутинных расчётов — больше внимания методике и интерпретации.</li>
+            <li>Стандартизированный формат отчётов, понятный преподавателям и экспертам.</li>
+          </ul>
+        </article>
+        <article class="benefit-card">
+          <div class="benefit-icon">
+            <img src="assets/img/benefits-analysts.svg" alt="" />
+          </div>
+          <h3>Для аналитиков и экономистов</h3>
+          <ul class="bullet-list">
+            <li>Быстрая оценка нескольких альтернативных инвестиционных проектов.</li>
+            <li>Снижение риска ошибок за счёт формализованных расчётных процедур.</li>
+            <li>Оперативный пересчёт показателей при изменении исходных данных.</li>
+          </ul>
+        </article>
+        <article class="benefit-card">
+          <div class="benefit-icon">
+            <img src="assets/img/benefits-business.svg" alt="" />
+          </div>
+          <h3>Для бизнеса и управленцев</h3>
+          <ul class="bullet-list">
+            <li>Прозрачные критерии принятия решений по инвестиционным проектам.</li>
+            <li>Понятные визуальные отчёты для обсуждения с руководством и инвесторами.</li>
+            <li>Единый подход к оценке проектов в организации.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="key-benefits">
+        <h3>Ключевые преимущества использования системы</h3>
+        <div class="pill-row">
+          <span class="pill">Экономия времени на расчётах</span>
+          <span class="pill">Сокращение количества ошибок</span>
+          <span class="pill">Повышение обоснованности решений</span>
+          <span class="pill">Наглядное представление результатов</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section id="trust" class="section section-alt">
+    <div class="container section-inner">
+      <header class="section-header">
+        <h2>Методика, проверки и реализация</h2>
+        <p>
+          Проект опирается на классические подходы инвестиционного анализа и проходит проверку
+          на корректность расчётов и устойчивость к изменениям исходных данных.
+        </p>
+      </header>
+
+      <div class="trust-grid">
+        <article class="trust-card">
+          <h3>На чём основаны расчёты</h3>
+          <p>
+            Программное средство опирается на общепринятые методы инвестиционного анализа:
+          </p>
+          <ul class="bullet-list">
+            <li>чистый дисконтированный доход (NPV);</li>
+            <li>внутренняя норма доходности (IRR);</li>
+            <li>срок окупаемости (PP/DPB);</li>
+            <li>индекс прибыльности (PI);</li>
+            <li>анализ чувствительности ключевых параметров проекта.</li>
+          </ul>
+        </article>
+        <article class="trust-card">
+          <h3>Проверка корректности расчётов</h3>
+          <p>
+            Для проверки корректности работы программного средства использовались тестовые проекты,
+            по которым предварительно выполнены расчёты вручную и в табличном процессоре.
+          </p>
+          <p>
+            Результаты, полученные с помощью разработанной системы, сопоставлены с эталонными значениями.
+            Отклонения не превышают допустимых погрешностей округления, что подтверждает корректность алгоритмов.
+          </p>
+        </article>
+        <article class="trust-card">
+          <h3>Технологическая реализация</h3>
+          <ul class="bullet-list">
+            <li>Структура данных для хранения параметров проектов.</li>
+            <li>Модульная архитектура: ввод данных, расчёты, визуализация, отчёты.</li>
+            <li>Возможность расширения: новые показатели, сценарии, шаблоны отчётов.</li>
+          </ul>
+        </article>
+        <article class="trust-card trust-card-outline">
+          <h3>Об участниках проекта</h3>
+          <p>
+            Проект реализован в рамках учебно-исследовательской работы по направлению
+            «Проектирование и разработка программного обеспечения».
+          </p>
+          <ul class="bullet-list">
+            <li><strong>Автор / разработчик:</strong> ФИО студента.</li>
+            <li><strong>Научный руководитель:</strong> ФИО, учёная степень, кафедра.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="section cta-section">
+    <div class="container cta-inner">
+      <div class="cta-text">
+        <h2>Попробуйте инструмент на примере вашего проекта</h2>
+        <p>
+          Введите исходные данные инвестиционного проекта, получите расчёт ключевых показателей
+          и наглядный отчёт за несколько минут.
+        </p>
+        <div class="cta-actions">
+          <a href="demo.html" class="btn btn-primary">Перейти к демо-версии</a>
+          <a href="methodology.html" class="btn btn-ghost">Скачать описание методики</a>
+        </div>
+        <p class="caption">
+          При необходимости вы можете связаться с автором проекта для демонстрации и обсуждения
+          возможностей адаптации системы под ваши задачи.
+        </p>
+      </div>
+      <div class="cta-panel">
+        <h3>Моделирование проекта (демо)</h3>
+        <form class="cta-form" onsubmit="event.preventDefault();">
+          <div class="form-row">
+            <label for="capex">Капитальные вложения, ₽</label>
+            <input type="number" id="capex" placeholder="5 000 000" />
+          </div>
+          <div class="form-row two-cols">
+            <div>
+              <label for="horizon">Горизонт, лет</label>
+              <input type="number" id="horizon" placeholder="7" min="1" />
+            </div>
+            <div>
+              <label for="rate">Ставка дисконтирования, %</label>
+              <input type="number" id="rate" placeholder="15" min="0" max="100" />
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="cashflow">Годовой денежный поток, ₽</label>
+            <input type="number" id="cashflow" placeholder="1 200 000" />
+          </div>
+          <button type="submit" class="btn btn-secondary btn-full">Смоделировать пример NPV</button>
+          <p class="cta-note">
+            Это демонстрационный блок интерфейса. Полная версия включает расширенный ввод денежных потоков
+            по годам и учёт налогов.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-copy">
+      © 2025. Проектирование и разработка программного средства автоматизации процедур анализа
+      и оценки эффективности инвестиционных проектов.
+    </p>
+    <p class="footer-meta">
+      Учебный демонстрационный сайт. Лабораторные работы №5–7.
+    </p>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="method-modal" aria-hidden="true">
+  <div class="modal">
+    <button class="modal-close" aria-label="Закрыть окно">&times;</button>
+    <h2>Методическая основа расчётов</h2>
+    <p>
+      В основе программного средства лежат стандартные подходы инвестиционного анализа: расчёт
+      дисконтированных денежных потоков, чистого дисконтированного дохода (NPV), внутренней нормы
+      доходности (IRR), срока окупаемости и индекса прибыльности.
+    </p>
+    <p>
+      Расчёты выполняются на основе введённых пользователем данных о капитальных вложениях,
+      операционных денежных потоках, ставке дисконтирования и параметрах налоговой нагрузки.
+    </p>
+  </div>
+</div>
+
+
+</body>
+</html>
